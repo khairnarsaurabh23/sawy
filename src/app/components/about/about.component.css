@@ -1,0 +1,41 @@
+.wrap {
+  overflow: hidden;
+  position: relative;
+  height: 100vh;
+  background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+}
+
+.content {
+  position: relative;
+  color: white;
+  opacity: 0;
+  transform: translateY(0px);
+  transition: all 1s ease-out;
+}
+
+.fade-in{
+	opacity: 1;
+	transform: translateY(0px);
+}
+
+div p{
+	border-bottom: 2px solid red;
+	display:  inline-block;
+}
+
+
+.title{
+	padding: 10vh;
+	text-align: center;
+	font-weight: bold;
+}
+
+
+
+.info{
+	padding-right: 30vw;
+	padding-left: 30vw;
+	font-weight: normal;
+	line-height: 2em;
+}
+
