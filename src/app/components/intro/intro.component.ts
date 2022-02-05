@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {gsap} from 'gsap' ;
 
 @Component({
   selector: 'app-intro',
@@ -11,25 +12,37 @@ export class IntroComponent implements OnInit {
 
   ngOnInit(): void {
     this.animateContent();
+
   }
 
 
-
-  animateContent() {
-    var intro:any = document.getElementById("nameIntro");
-    intro.innerHTML = intro.innerText.split("")
-      .map(function(c:string){
-        return "<span>"+c+"<span>";
-      }).join('')
-
-    anime({
-        targets:"div span",
-        opacity:1,
-        delay:function(element:any,i:any){
-          return i*50;
-        }
-      });
-    console.log(intro);
+  animateContent(){
+    //var scrollTrigger = gsap.registerPlugin(ScrollTrigger);
+    var tl = gsap.timeline({defaults:{opacity:1}})
+    tl.to("#text", {
+      delay:6,
+      duration:2
+    }).to(".languages",{ 
+      // scrollTrigger:{
+      //   trigger:"#nameIntro",
+      //   start:"top top",
+      //   scrub:true,
+      //   markers:true
+      // },
+      rotation:360,
+      y:"+=200",
+      duration: 2,
+      ease: "elastic.out",
+      stagger:0.2
+    }).to(".mean-stack",{
+      rotation:360,
+      x:"+=100",
+      duration: 3,
+      ease: "bounce.out(1, 0.4)",
+    }) .to("#down-arrow", {
+      y:"+=50",
+      duration:3,
+      ease:"bounce.out(3, 1)"
+    });
   }
-
 }

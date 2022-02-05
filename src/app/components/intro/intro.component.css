@@ -1,45 +1,98 @@
 .container{
 	background-color: black;
-	justify-content: center;
 	height: 100vh;
-	padding: 15%;
 	box-sizing: border-box;
-
+	align-items: center;
+	justify-content: center;
 }
 
-.nameIntro{
-	opacity: 0;
-}
 
-#nameIntro{
-	padding: 8vh;
-
-}
-
-#name{
+.column{
 	padding: 0px;
 	margin: 0px;
+	width: 20%;
+	height: 100%;
+	float: left;
+	padding-top: 20%;
 	box-sizing: border-box;
-	display: block;
 }
 
-.text{
-	padding-left:20%;
-	padding-right: 20%;
+#down-arrow {
+	margin: auto;
+	align-items: center;
+	justify-content: center;
 }
 
-div div{
+.text-content{
+	padding: 0px;
+	margin: 0px;
+	width: 60%;
+	height: 100%;
+	float: left;
+	box-sizing: border-box;
+}
+
+
+#nameIntro{
+	box-sizing: border-box;
+	font-family: monospace;
+	font-size: 2em;
+	white-space: nowrap;
+    overflow: hidden;
+    animation: animated-text 5s steps(21,end) 1s normal both,
+             animated-cursor 0.8s steps(21,end) 0.1s infinite alternate;
+}
+
+
+div{
+ 	display: block;
+ 	position: relative;
 	color: white;
 	text-align: center;
+	justify-content: center;
 }
 
 p{
-	padding: 2px;
+	padding: 0px;
 	margin: 0px;
+	box-sizing: border-box;
+	display: inline-block;
+}
+
+#text{
+	padding: 20%;
+	box-sizing: border-box;
+	opacity: 0;
+}
+
+section {
+	padding: 0px;
+	margin: 0px;
+	height: 20%;
 	box-sizing: border-box;
 }
 
+.mean-stack{
+	display: block;
+}
 
-.fade-in{
-	opacity: 1;
+.logo{
+	box-sizing: border-box;
+	opacity: 0;
+	max-height: 50px;
+	max-width: 50px;
+	padding: 5px;
+}
+
+
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: 21ch;}
+}
+
+@keyframes animated-cursor{
+  from{
+  	border-right: 10px solid white;
+  }
+  to{border-right-color: transparent;}
 }
