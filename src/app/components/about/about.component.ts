@@ -9,45 +9,25 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-  ctrl = new ScrollMagic.Controller();
 
   constructor() { }
 
   ngOnInit() {
-    gsap.registerPlugin(ScrollTrigger, Draggable);
+    gsap.registerPlugin(ScrollTrigger);
 
     this.initScrollTriggers();
   }
 
   initScrollTriggers() {
-      const scrollBox = gsap.timeline({
+      gsap.to(".content",{
         scrollTrigger: {
-          trigger: ".content",
-          pin: true,
-          start: "top center",
-          end: "bottom bottom",
-          toggleClass:"fade-in",
-          toggleActions: "play pause restart none"
-        }
-      });
-      scrollBox.to(".wrap", { y: 30, opacity: 1 });
-    };
-    
-    //gsap.from(".content", {
-    //   opacity:1,
-    //   duration:3,
-    //   ScrollTrigger:{
-    //   trigger:".content",
-    //   scrub:true,
-    //   start:"top center",
-    //   end:"top top",
-    //   pin:true
-    // }});
-  //   new ScrollMagic.Scene({
-  //     triggerElement:'.content'
-  //   })
-  //     .setClassToggle('.content', 'fade-in')
-  //     .addTo(this.ctrl);
-  // }
-  }
+          trigger:".title", 
+          scrub:true,
+        },
+        opacity:1,
+        y:50
+      }
+    );
+  };    
+}
 

@@ -1,0 +1,21 @@
+.container-fluid > .row {
+	min-height: 100vh;
+	max-height: 100vh;
+}
+
+/*.float-end {
+	float: left ;
+}*/
+
+.title {
+	font-size: 3vh;
+	font-weight: bold;
+	color: green;
+}
+
+.text{
+	font-size: 1vh;
+	font-weight: normal;
+	color: black;
+}
+

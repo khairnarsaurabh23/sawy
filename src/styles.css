@@ -1,9 +1,9 @@
-body{
+@import "~bootstrap/dist/css/bootstrap.min.css";
+/*body{
 	padding: 0px;
 	margin: 0px;
 	height: 100vh;
-	width: 100vw;
+	max-width: 100vw;
 	box-sizing: border-box;
-	font-family: "Montserrat", sans-serif;
-}
+}*/
 

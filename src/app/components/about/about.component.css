@@ -5,6 +5,16 @@
   background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
 }
 
+ .title{
+ 	text-align: center;
+	display: inline-block;
+	border-bottom: 3px solid darkred;
+}
+
+
+
+/*
+
 .content {
   position: relative;
   color: white;
@@ -39,3 +49,4 @@ div p{
 	line-height: 2em;
 }
 
+*/
