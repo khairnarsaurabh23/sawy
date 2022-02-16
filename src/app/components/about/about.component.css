@@ -2,16 +2,30 @@
   overflow: hidden;
   position: relative;
   height: 100vh;
-  background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+  color: white;
+  /*background-image: linear-gradient(to top, #09203f 0%, #537895 100%);*/
 }
 
  .title{
  	text-align: center;
 	display: inline-block;
-	border-bottom: 3px solid darkred;
+	/*font-weight: 50vh;*/
 }
 
+.title > i {
+	font-size: 6vh;
+	color: palegreen;
+	border-bottom: 3px solid white;
+}
 
+.img-responsive{
+	max-width: 80%;
+	height: 100%;
+}
+
+.text{
+	font-size: 3vh;
+}
 
 /*
 

@@ -16,7 +16,7 @@ export class ProjectsComponent implements OnInit {
 
   ngOnInit(): void {
     gsap.registerPlugin(ScrollTrigger);
-    this.slide();
+    //this.slide();
   }
 
   animate(){
