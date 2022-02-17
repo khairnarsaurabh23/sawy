@@ -19,7 +19,7 @@ export class AboutComponent implements OnInit {
   }
 
   initScrollTriggers() {
-      gsap.to(".content",{
+      gsap.to(".text",{
         scrollTrigger: {
           trigger:".title", 
           scrub:true,

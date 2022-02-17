@@ -14,7 +14,7 @@ export class IntroComponent implements OnInit {
 
   ngOnInit(): void {
     this.animateContent();
-    this.name();
+    //this.name();
   }
 
   name(){
