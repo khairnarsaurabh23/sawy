@@ -1,0 +1,14 @@
+.container-fluid{
+	position: relative;
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+.row{
+	font-weight: 3vh;
+}
+
+.copyright{
+	text-align: center;
+	font-weight: 2vh;
+}
