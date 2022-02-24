@@ -9,7 +9,7 @@ app.listen(process.env.PORT || 8080);
 //PathLocationStratergy
 //app.use(express.static(__dirname + '/dist/github-login'));
 app.get('/*', function(req,res) {
-	res.sendFile(path.join(__dirname+'/dist/github-login/index.html'));
+	res.sendFile(path.join(__dirname+'/dist/akasawy/portfolio/index.html'));
 });
 
 
