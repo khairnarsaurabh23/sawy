@@ -36,7 +36,7 @@ export class IntroComponent implements OnInit {
     var text2 = "KHAIRNAR SAURABH";
     var tl = gsap.timeline({defaults:{yoyo:true}});
     tl.to(".greet", {
-      delay:2,
+      delay:1,
       duration:2,
       opacity:1,
       ease: "bounce.out",
@@ -53,7 +53,6 @@ export class IntroComponent implements OnInit {
       y:-10,
     })
     .to("#logo",{
-      delay:4,
       opacity:1,
       duration:2,
       scrub: true,
@@ -64,7 +63,7 @@ export class IntroComponent implements OnInit {
       opacity:1,
       
     }).set(".scroll", {
-      delay:4,
+      delay:1,
       duration:3,
       stagger:0.3,
       text:{
