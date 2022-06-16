@@ -24,6 +24,7 @@
 	}
 }*/
 
+
 .row{
 	min-height: 100vh;
 	background: rgba(var(--bs-success-rgb)) url("./../../../assets/skills.svg") center no-repeat fixed;

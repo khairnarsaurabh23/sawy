@@ -42,12 +42,12 @@ export class IntroComponent implements OnInit {
       ease: "bounce.out",
       y:20
     }).to("#welcome-svg",{
-      delay:4,
+      delay:1,
       opacity:1,
       duration:4,
       xPercent:-30,
     }).to(".second",{
-      delay:1,
+      delay:0,
       opacity:1,
       duration:2,
       y:-10,
@@ -57,20 +57,19 @@ export class IntroComponent implements OnInit {
       duration:2,
       scrub: true,
       stagger:0.3
-    })
-    .to(".scroll", {
-      y:-10,
+    }).to(".mouse_scroll", {
+      y:+30,
       opacity:1,
-      
-    }).set(".scroll", {
-      delay:1,
-      duration:3,
-      stagger:0.3,
-      text:{
-        value: "Explore",
-      },
-      ease: "none"
     });
+    // .set(".scroll", {
+    //   delay:1,
+    //   duration:3,
+    //   stagger:0.3,
+    //   text:{
+    //     value: "Explore",
+    //   },
+    //   ease: "none"
+    // });
   }
 }
 
@@ -78,7 +77,7 @@ export class IntroComponent implements OnInit {
     // tl.to("#text", {
     //   delay:6,
     //   duration:2
-    // }).to(".languages",{ 
+    // }).to(".languages",{
     //   rotation:360,
     //   y:"+=200",
     //   duration: 2,

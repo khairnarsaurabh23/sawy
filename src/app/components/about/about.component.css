@@ -1,70 +1,199 @@
-.wrap {
-  overflow: hidden;
-  position: relative;
-  height: 100vh;
-  color: white;
-  /*background-image: linear-gradient(to top, #09203f 0%, #537895 100%);*/
+:root {
+    --primary-color: #0F9D58;
+    --background-color: #f0f3f7;
+    --secon-color: #9da2ad;
+    --grey: #7a7a7b;
+    --white: #ffffff;
 }
 
- .title{
- 	text-align: center;
-	display: inline-block;
-	/*font-weight: 50vh;*/
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.title > i {
-	font-size: 6vh;
-	color: palegreen;
-	border-bottom: 3px solid white;
+a {
+    color: unset;
+    text-decoration: none;
 }
 
-.img-responsive{
-	max-width: 80%;
-	height: 100%;
-}
-
-.text{
-	font-size: 3vh;
-}
-
-/*.abt-img {
-	background: black url(./../../../assets/about.svg) no-repeat fixed;
-}*/
-
-/*
-
-.content {
-  position: relative;
-  color: white;
-  opacity: 0;
-  transform: translateY(0px);
-  transition: all 1s ease-out;
-}
-
-.fade-in{
-	opacity: 1;
-	transform: translateY(0px);
-}
-
-div p{
-	border-bottom: 2px solid red;
-	display:  inline-block;
-}
-
-
-.title{
-	padding: 10vh;
-	text-align: center;
-	font-weight: bold;
+body,
+html {
+    background-color: var(--background-color);
+    scroll-behavior: smooth;
+    position: relative;
+    overflow-x: hidden;
 }
 
 
 
-.info{
-	padding-right: 30vw;
-	padding-left: 30vw;
-	font-weight: normal;
-	line-height: 2em;
+
+
+
+
+.fullheight {
+    height: 100vh;
 }
 
-*/
+.align-items-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 1366px;
+    margin: 0 auto;
+}
+
+
+section {
+    padding: 9rem 0;
+}
+
+
+.fullwidth {
+    width: 100%;
+}
+
+#about img {
+    opacity: 0;
+    border-radius: 2rem;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
+        rgba(17, 17, 26, 0.1) 0px 16px 56px,
+        rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+
+.description{
+    opacity: 0;
+}
+
+.about-slogan {
+    color: whitesmoke;
+    padding: 4rem;
+    background-color: var(--white);
+    border-radius: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+
+.about-slogan.start {
+    transform: translateX(-10rem) !important;
+}
+
+.about-slogan h3 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    color: var(--grey);
+}
+
+.about-slogan p {
+    font-size: 3vh;
+}
+
+.primary-color {
+    color: var(--primary-color);
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 70px;
+    right: 70px;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    padding: .5rem;
+    z-index: 99;
+    display: none;
+}
+
+/* ANIMATION */
+
+.left-to-right {
+    transform: translateX(-15%);
+    transition: 1s ease-in-out;
+}
+
+.left-to-right.start {
+    transform: translateX(0);
+}
+
+.right-to-left {
+    transform: translateX(15%);
+    transition: 1s ease-in-out;
+}
+
+.right-to-left.start {
+    transform: translateX(0);
+}
+
+
+
+
+
+
+/* GRID SYSTEM */
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+[class*="col-"] {
+    padding: 1rem;
+}
+
+.col-7 {
+    width: 58.33%;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+    * {
+        font-size: 2 vh;
+        color:  black;
+    }
+
+    .about {
+        background-image: url('/assets/about.jpg');
+        background-attachment: fixed;
+    }
+
+/*    .about-slogan{
+        padding: 0px;
+        margin: 2vh;
+        min-width: 100vw;
+    }*/
+
+    .about-slogan.start {
+        transform: translateX(0) !important;
+    }
+
+    /* MOBILE NAV */
+
+    .mb-nav {
+        position: fixed;
+        bottom: 0;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--white);
+        z-index: 99;
+        overflow: hidden;
+        border-top-left-radius: 2rem;
+        border-top-right-radius: 2rem;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+
+    .h-xs {
+        display: none;
+    }
+}
