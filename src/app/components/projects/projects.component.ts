@@ -29,16 +29,16 @@ export class ProjectsComponent implements OnInit {
     });
 
     tl.to(".project1", {
-      duration:0,
+      duration:1,
       opacity:1,
       y:60,
       ease: "bounce.out"
     }).to(".project2", {
       delay:1,
-      duration:2,
+      duration:1,
       opacity:1,
-      x:-50,
-      ease:"bounce.in"
+      y:50,
+      ease:"bounce.out"
     });
 
     // .set(".scroll", {

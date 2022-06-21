@@ -31,19 +31,19 @@ export class AboutComponent implements OnInit {
     initScrollTriggers(){
     var tl = gsap.timeline({
       scrollTrigger:{
-        trigger:"#about",
+        trigger:".about-template",
         start:"top top",
         pin:true
       }
     });
 
     tl.to(".self-image", {
-      duration:2,
+      duration:1,
       opacity:1,
       y:60,
     }).to(".description", {
       delay:1,
-      duration:2,
+      duration:1,
       opacity:1,
       x:-50,
     });

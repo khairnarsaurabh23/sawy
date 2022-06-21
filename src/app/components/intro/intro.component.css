@@ -59,7 +59,7 @@ a {
 	animation: fill-svg 0.5s ease forwards 6s;
 }
 
-.name path, mask path:nth-child(1){
+/*.name path, mask path:nth-child(1){
 	stroke-dasharray: 380px;
 	stroke-dashoffset: 380px;
 	animation: anime 2s ease forwards 5s;
@@ -128,7 +128,7 @@ a {
 	stroke-dasharray: 380px;
 	stroke-dashoffset: 380px;
 	animation: anime 2s ease forwards 8.9s;
-}
+}*/
 
 @keyframes anime {
 	to{
